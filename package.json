@@ -1,6 +1,6 @@
 {
   "name": "ewd-xpress",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Express and ewd-qoper8 based application container",
   "main": "index.js",
   "scripts": {
