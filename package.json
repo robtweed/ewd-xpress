@@ -1,0 +1,29 @@
+{
+  "name": "ewd-xpress",
+  "version": "1.0.0",
+  "description": "Express and ewd-qoper8 based application container",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "",
+    "body-parser": "",
+    "ewd-qoper8": "",
+    "ewd-qoper8-express": "",
+    "ewd-session": "",
+    "ewd-qoper8-cache": "",
+    "ewd-qoper8-gtm": "",
+    "socket.io": "",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robtweed/ewd-xpress.git"
+  },
+  "author": "Rob Tweed, M/Gateway Developments Ltd",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/robtweed/ewd-xpress/issues"
+  },
+  "homepage": "https://github.com/robtweed/ewd-xpress#readme"
+}
