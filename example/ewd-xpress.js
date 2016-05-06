@@ -32,13 +32,10 @@
 var config = {
   managementPassword: 'keepThisSecret!',
   serverName: 'New EWD Server',
-  port: 8081,
+  port: 8080,
   poolSize: 1,
   database: {
-    type: 'cache',
-    params: {
-      namespace: 'VISTA'
-    }
+    type: 'cache'
   }
 };
 
