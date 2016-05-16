@@ -24,7 +24,7 @@
  |  limitations under the License.                                          |
  ----------------------------------------------------------------------------
 
-  14 April 2016
+  16 May 2016
 
 */
 
@@ -40,4 +40,23 @@ var config = {
 };
 
 var ewdXpress = require('ewd-xpress').master;
-ewdXpress(config);
+
+/*
+  Optiional - add custom Express middleware, eg:
+
+  var xp = ewdXpress.intercept();
+
+
+  xp.app.get('/testx', function(req, res) {
+    console.log('*** /testx query: ' + JSON.stringify(req.query));
+    res.send({
+      hello: 'world',
+      query: JSON.stringify(req.query)
+    });
+    // or use ewd-qoper8-express handler
+    //xp.qx.handleMessage(req, res);
+  });
+*/
+
+
+ewdXpress.start(config);
