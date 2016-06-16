@@ -41,6 +41,12 @@ module.exports = {
   handlers: {
 
     login: function(messageObj, finished) {
+
+      if (messageObj.method !== 'POST') {
+        finished({error: 'Only POST requests are accepted'});
+        return;
+      }
+
       var username = messageObj.body.username;
       if (username === '') {
         finished({error: 'You must enter a username'});
