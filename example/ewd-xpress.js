@@ -24,7 +24,9 @@
  |  limitations under the License.                                          |
  ----------------------------------------------------------------------------
 
-  16 May 2016
+  21 June 2016
+
+  Many thanks to Ward DeBacker for help with custom router response handling
 
 */
 
@@ -42,10 +44,13 @@ var config = {
 var ewdXpress = require('ewd-xpress').master;
 
 /*
-  Optiional - add custom Express middleware, eg:
+  //Optional - add custom Express middleware, eg:
+
+  // first load the intercept
 
   var xp = ewdXpress.intercept();
 
+  // now you can add your own custom routes..:
 
   xp.app.get('/testx', function(req, res) {
     console.log('*** /testx query: ' + JSON.stringify(req.query));
@@ -56,6 +61,24 @@ var ewdXpress = require('ewd-xpress').master;
     // or use ewd-qoper8-express handler
     //xp.qx.handleMessage(req, res);
   });
+
+  // or, even simpler, using ewd-qoper8-express router:
+
+  xp.app.use('/test', xp.qx.router());
+
+  // router + custom response handling:
+
+  xp.app.use('/report', xp.qx.router({ nextCallback: true }), function(req, res) {
+    var message = res.locals.message;
+    res.set('Content-Type', 'application/xml');
+    if (message.error) {
+      res.send(js2xmlparser('error', message));
+    }
+    else {
+      res.send(js2xmlparser(message.json.root || 'xmlRoot', message.json.data || {}));
+    }
+  });
+
 */
 
 
