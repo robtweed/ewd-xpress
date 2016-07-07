@@ -7,6 +7,7 @@ Twitter: @rtweed
 
 Google Group for discussions, support, advice etc: [http://groups.google.co.uk/group/enterprise-web-developer-community](http://groups.google.co.uk/group/enterprise-web-developer-community)
 
+Thanks to Ward De Backer for debugging assistance and functionality suggestions
 
 ## Installing
 
