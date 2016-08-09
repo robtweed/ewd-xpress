@@ -6,6 +6,8 @@ Copy the /www files to an application directory, eg ~/ewd3/www/vista
 
 Copy /service-modules/vista-login directory to ~/ewd3/node_modules/vista-login
 
+Copy /back-end-module/vista.js to ~/ewd3/node_modules/vista.js
+
 You'll need to also install browserify:
 
       cd ~/ewd3
@@ -30,6 +32,9 @@ To create the bundle.js file needed by the app:
      cd ~/ewd3/www/vista
      browserify -t [ babelify ] app.js -o bundle.js
 
+Update ewd-xpress, if necessary, to build 1.19 or later.
+
+Restart ewd-xpress
 
 Load the app in a browser using http://xx.xx.xx.xx:8080/vista/index.html
 (substitute the IP address and port as required)
