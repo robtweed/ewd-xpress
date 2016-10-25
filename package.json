@@ -1,9 +1,9 @@
 {
   "name": "ewd-xpress",
-  "version": "1.30.0",
+  "version": "1.31.0",
   "description": "Express and ewd-qoper8 based application container",
   "main": "index.js",
-  "peerDependencies": {
+  "dependencies": {
     "express": "",
     "body-parser": "",
     "ewd-qoper8": "",
