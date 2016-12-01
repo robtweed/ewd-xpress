@@ -1,6 +1,6 @@
 {
   "name": "ewd-xpress",
-  "version": "1.32.0",
+  "version": "1.33.0",
   "description": "Express and ewd-qoper8 based application container",
   "main": "index.js",
   "dependencies": {
@@ -11,6 +11,7 @@
     "ewd-session": "",
     "ewd-qoper8-cache": "",
     "ewd-qoper8-gtm": "",
+    "ewd-qoper8-redis": "",
     "socket.io": ""
   },
   "scripts": {
