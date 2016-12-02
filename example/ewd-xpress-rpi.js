@@ -1,7 +1,7 @@
 /*
 
  ----------------------------------------------------------------------------
- | ewd-xpress: Express and ewd-qoper8 based application container           |
+ | ewd-xpress.js: Express and ewd-qoper8 based application container        |
  |                                                                          |
  | Copyright (c) 2016 M/Gateway Developments Ltd,                           |
  | Reigate, Surrey UK.                                                      |
@@ -24,13 +24,21 @@
  |  limitations under the License.                                          |
  ----------------------------------------------------------------------------
 
-  2 December 2016
+  21 June 2016
 
 */
 
-var build = {
-  no: '1.33.1',
-  date: '2 December 2016',
+
+var config = {
+  managementPassword: 'keepThisSecret!',
+  serverName: 'Raspberry Pi EWD Server',
+  port: 8080,
+  poolSize: 2,
+  database: {
+    type: 'redis'
+  }
 };
 
-module.exports = build;
+var ewdXpress = require('ewd-xpress').master;
+ewdXpress.start(config);
+
