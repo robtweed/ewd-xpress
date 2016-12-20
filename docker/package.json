@@ -1,0 +1,16 @@
+{
+  "name": "ewd-xpress-appliance",
+  "version": "1.0.0",
+  "description": "EWD 3 ewd-xpress appliance",
+  "author": "Rob Tweed <rtweed@mgateway.com>",
+  "main": "ewd-xpress.js",
+  "scripts": {
+    "start": "node ewd-xpress.js"
+  },
+  "dependencies": {
+    "ewd-xpress": "",
+    "ewd-xpress-monitor": "",
+    "tcp-netx": "",
+    "ewd-redis-globals": ""
+  }
+}
